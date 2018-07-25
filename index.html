@@ -7,27 +7,25 @@
 </head>
 <body>
 <audio id="btnsound" src="sound/pop.ogg" preload="auto"></audio>
-<div id="app">
-    <div id="words" class="computed">
+<div id="phone">
+    <div id="words" class="results">
         <p>{{ wordsDisplay }}</p>
     </div>
-    <div id="phone">
-        <div id="number" class="computed">
-            <span>{{ number }}</span>
-        </div>
-        <div id="pad">
-            <button class="button" v-on:click="press">1</button>
-            <button class="button" v-on:click="press">2</button>
-            <button class="button" v-on:click="press">3</button>
-            <button class="button" v-on:click="press">4</button>
-            <button class="button" v-on:click="press">5</button>
-            <button class="button" v-on:click="press">6</button>
-            <button class="button" v-on:click="press">7</button>
-            <button class="button" v-on:click="press">8</button>
-            <button class="button" v-on:click="press">9</button>
-            <button id="zero" class="button" v-on:click="press">0</button>
-            <button id="clear" class="button" v-on:click="press">Clear</button>
-        </div>
+    <div id="number" class="results">
+        <span>{{ number }}</span>
+    </div>
+    <div id="pad">
+        <button class="button" v-on:click="press">1</button>
+        <button class="button" v-on:click="press">2</button>
+        <button class="button" v-on:click="press">3</button>
+        <button class="button" v-on:click="press">4</button>
+        <button class="button" v-on:click="press">5</button>
+        <button class="button" v-on:click="press">6</button>
+        <button class="button" v-on:click="press">7</button>
+        <button class="button" v-on:click="press">8</button>
+        <button class="button" v-on:click="press">9</button>
+        <button id="zero" class="button" v-on:click="press">0</button>
+        <button id="clear" class="button" v-on:click="press">Clear</button>
     </div>
 </div>
 <script src="https://unpkg.com/vue"></script>

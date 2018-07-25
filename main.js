@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: "#app",
+    el: "#phone",
     data: {
         number: "",
         words: [],
@@ -23,5 +23,5 @@ var app = new Vue({
 });
 
 function getWords(number) {
-    return ["Ha", "Had", "Has", "Have", "Haven"];
+    return ["Ha", "Had", "Has", "Hat", "Hack", "Have", "Haven"];
 }
