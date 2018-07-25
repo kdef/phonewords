@@ -1,0 +1,62 @@
+html {
+  background: #CCC;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#phone {
+  border: 2px solid #222;
+  border-radius: 4px;
+  max-width: 350px;
+}
+
+.computed {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  padding: 10px;
+  justify-items: end;
+  align-items: center;
+}
+
+#words {
+  font-size: 21px;
+  height: 140px;
+}
+
+#number {
+  font-size: 42px;
+  height: 70px;
+  border-bottom: 2px solid #222;
+}
+
+#pad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(60px, 1fr));
+  grid-gap: 10px;
+  padding: 15px;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 20px;
+  display: grid;
+  padding: 15px 10px;
+  justify-items: center;
+  align-items: center;
+  color: #FAFAFA;
+  border: 1px solid #222;
+  border-radius: 4px;
+  background: #777;
+}
+
+#clear {
+  background: steelblue;
+  grid-column: 1/3;
+}
