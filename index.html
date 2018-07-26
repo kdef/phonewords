@@ -15,20 +15,21 @@
         <span>{{ number }}</span>
     </div>
     <div id="pad">
-        <button class="button" v-on:click="press">1</button>
-        <button class="button" v-on:click="press">2</button>
-        <button class="button" v-on:click="press">3</button>
-        <button class="button" v-on:click="press">4</button>
-        <button class="button" v-on:click="press">5</button>
-        <button class="button" v-on:click="press">6</button>
-        <button class="button" v-on:click="press">7</button>
-        <button class="button" v-on:click="press">8</button>
-        <button class="button" v-on:click="press">9</button>
-        <button id="zero" class="button" v-on:click="press">0</button>
-        <button id="clear" class="button" v-on:click="press">Clear</button>
+        <button v-on:click="press" data-key="1">1</button>
+        <button v-on:click="press" data-key="2">2 abc</button>
+        <button v-on:click="press" data-key="3">3 def</button>
+        <button v-on:click="press" data-key="4">4 ghi</button>
+        <button v-on:click="press" data-key="5">5 jkl</button>
+        <button v-on:click="press" data-key="6">6 mno</button>
+        <button v-on:click="press" data-key="7">7 pqrs</button>
+        <button v-on:click="press" data-key="8">8 tuv</button>
+        <button v-on:click="press" data-key="9">9 wxyz</button>
+        <button id="zero" v-on:click="press" data-key="0">0</button>
+        <button id="clear" v-on:click="press" data-key="clear">Clear</button>
     </div>
 </div>
 <script src="https://unpkg.com/vue"></script>
+<script src="trie.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

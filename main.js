@@ -1,3 +1,5 @@
+var trie = new PhonePadTrie();
+
 var app = new Vue({
     el: "#phone",
     data: {
@@ -6,8 +8,8 @@ var app = new Vue({
     },
     methods: {
         press(event) {
-            let key = event.target.innerText;
-            if (key == "Clear") {
+            let key = event.target.dataset.key;
+            if (key == "clear") {
                 app.number = "";
             } else {
                 app.number += key;
@@ -23,5 +25,20 @@ var app = new Vue({
 });
 
 function getWords(number) {
-    return ["Ha", "Had", "Has", "Hat", "Hack", "Have", "Haven"];
+    return trie.getWords(app.number);
 }
+
+function loadWords() {
+    let resp = JSON.parse(this.responseText);
+    let words = resp.words;
+
+    for (let i = 0; i < words.length; i++) {
+        trie.insert(words[i]);
+    }
+    console.log("Loaded all words");
+}
+
+var req = new XMLHttpRequest();
+req.addEventListener("load", loadWords);
+req.open("GET", "words.json");
+req.send();

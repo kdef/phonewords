@@ -43,7 +43,7 @@ body {
   padding: 15px;
 }
 
-.button {
+#pad button {
   cursor: pointer;
   font-size: 20px;
   display: grid;
