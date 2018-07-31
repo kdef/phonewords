@@ -15,18 +15,26 @@
         <span>{{ number }}</span>
     </div>
     <div id="pad">
-        <button v-on:click="press" data-key="1">1</button>
-        <button v-on:click="press" data-key="2">2 abc</button>
-        <button v-on:click="press" data-key="3">3 def</button>
-        <button v-on:click="press" data-key="4">4 ghi</button>
-        <button v-on:click="press" data-key="5">5 jkl</button>
-        <button v-on:click="press" data-key="6">6 mno</button>
-        <button v-on:click="press" data-key="7">7 pqrs</button>
-        <button v-on:click="press" data-key="8">8 tuv</button>
-        <button v-on:click="press" data-key="9">9 wxyz</button>
-        <button id="zero" v-on:click="press" data-key="0">0</button>
+        <button class="digit" v-on:click="press" data-key="1">1</button>
+        <button class="digit" v-on:click="press" data-key="2">2 abc</button>
+        <button class="digit" v-on:click="press" data-key="3">3 def</button>
+        <button class="digit" v-on:click="press" data-key="4">4 ghi</button>
+        <button class="digit" v-on:click="press" data-key="5">5 jkl</button>
+        <button class="digit" v-on:click="press" data-key="6">6 mno</button>
+        <button class="digit" v-on:click="press" data-key="7">7 pqrs</button>
+        <button class="digit" v-on:click="press" data-key="8">8 tuv</button>
+        <button class="digit" v-on:click="press" data-key="9">9 wxyz</button>
+        <button id="del" v-on:click="press" data-key="del">DEL</button>
+        <button class="digit" v-on:click="press" data-key="0">0</button>
         <button id="clear" v-on:click="press" data-key="clear">Clear</button>
     </div>
+</div>
+<div id="suggestions">
+</div>
+<div id="credits">
+    <small>Desktop Photo by rawpixel on Unsplash</small>
+    <small>\</small>
+    <small>Phone image by TheGoldenBox/Mielon on Wikimedia Commons</small>
 </div>
 <script src="https://unpkg.com/vue"></script>
 <script src="trie.js"></script>

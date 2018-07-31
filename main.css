@@ -1,5 +1,6 @@
 html {
-  background: #CCC;
+  background: url(images/desktop.jpg) no-repeat center center fixed;
+  background-size: cover;
   font-family: sans-serif;
 }
 
@@ -11,36 +12,34 @@ body {
 }
 
 #phone {
-  border: 2px solid #222;
-  border-radius: 4px;
-  max-width: 350px;
+  max-width: 337px;
+  background: url(images/smartphone.svg) no-repeat center;
+  background-size: contain;
+  padding: 10% 6% 10% 5%;
 }
 
-.results {
-  width: 100%;
-  box-sizing: border-box;
-  display: grid;
-  padding: 10px;
-  justify-items: end;
-  align-items: center;
-  border-bottom: 2px solid #222;
-}
 
 #words {
   font-size: 21px;
-  height: 140px;
+  color: white;
+  min-height: 140px;
 }
 
 #number {
   font-size: 42px;
-  height: 70px;
+  color: white;
+  min-height: 70px;
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  justify-items: end;
+  align-items: center;
 }
 
 #pad {
   display: grid;
   grid-template-columns: repeat(3, minmax(60px, 1fr));
   grid-gap: 10px;
-  padding: 15px;
 }
 
 #pad button {
@@ -50,17 +49,19 @@ body {
   padding: 15px 10px;
   justify-items: center;
   align-items: center;
-  color: #FAFAFA;
+  color: white;
   border: 1px solid #222;
   border-radius: 4px;
-  background: #777;
 }
 
-#zero {
-  grid-column-start: 2;
+.digit {
+  background: gray;
+}
+
+#del {
+  background: firebrick;
 }
 
 #clear {
   background: steelblue;
-  grid-column-start: 1;
 }
