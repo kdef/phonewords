@@ -19,6 +19,16 @@ var app = new Vue({
             }
             app.words = trie.getWords(app.number);
             app.suggestions = trie.getSuggestions(app.number);
+        },
+        keyboardPress(event) {
+            let key = event.key;
+            if (key in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']) {
+                app.number += key;
+            } else if (key == "Backspace") {
+                app.number = app.number.slice(0, -1);
+            }
+            app.words = trie.getWords(app.number);
+            app.suggestions = trie.getSuggestions(app.number);
         }
     },
     computed: {
@@ -29,6 +39,9 @@ var app = new Vue({
             return this.suggestions.sort().join(", ");
         }
     },
+    created: function() {
+        window.addEventListener("keypress", this.keyboardPress);
+    }
 });
 
 function loadWords() {
