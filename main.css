@@ -16,21 +16,33 @@ body {
   background: url(images/smartphone.svg) no-repeat center;
   background-size: contain;
   padding: 10% 6% 10% 5%;
+/* A zooming effect
+  background-size: cover;
+  max-width: 670px;
+  min-width: 167px;
+  padding-top: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 8%; */
 }
-
 
 #words {
   font-size: 21px;
-  color: white;
   min-height: 140px;
+  color: white;
+}
+
+#suggestions {
+  font-size: 18px;
+  min-height: 70px;
+  color: orange;
 }
 
 #number {
   font-size: 42px;
-  color: white;
   min-height: 70px;
   width: 100%;
-  padding: 10px;
+  color: white;
   display: grid;
   justify-items: end;
   align-items: center;

@@ -5,28 +5,31 @@ var app = new Vue({
     data: {
         number: "",
         words: [],
+        suggestions: []
     },
     methods: {
         press(event) {
             let key = event.target.dataset.key;
             if (key == "clear") {
                 app.number = "";
+            } else if (key == "del") {
+                app.number = app.number.slice(0, -1);
             } else {
                 app.number += key;
             }
-            app.words = getWords(app.number);
+            app.words = trie.getWords(app.number);
+            app.suggestions = trie.getSuggestions(app.number);
         }
     },
     computed: {
         wordsDisplay() {
             return this.words.join(", ");
+        },
+        suggestDisplay() {
+            return this.suggestions.sort().join(", ");
         }
     },
 });
-
-function getWords(number) {
-    return trie.getWords(app.number);
-}
 
 function loadWords() {
     let resp = JSON.parse(this.responseText);

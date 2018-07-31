@@ -8,10 +8,13 @@
 <body>
 <audio id="btnsound" src="sound/pop.ogg" preload="auto"></audio>
 <div id="phone">
-    <div id="words" class="results">
+    <div id="words">
         <p>{{ wordsDisplay }}</p>
     </div>
-    <div id="number" class="results">
+    <div id="suggestions">
+        <p>{{ suggestDisplay }}</p>
+    </div>
+    <div id="number">
         <span>{{ number }}</span>
     </div>
     <div id="pad">
@@ -28,8 +31,6 @@
         <button class="digit" v-on:click="press" data-key="0">0</button>
         <button id="clear" v-on:click="press" data-key="clear">Clear</button>
     </div>
-</div>
-<div id="suggestions">
 </div>
 <div id="credits">
     <small>Desktop Photo by rawpixel on Unsplash</small>
