@@ -25,6 +25,10 @@ function TrieNode() {
     this.words = [];
 }  
 
+TrieNode.prototype.listChildren = function() {
+    return Object.keys(this.children);
+};
+
 function PhonePadTrie() {
     this.root = new TrieNode();
 }
@@ -92,7 +96,9 @@ PhonePadTrie.prototype.getSuggestions = function(number) {
     return suggestions;
 }
 
+/* Usage example:
 let ex = new PhonePadTrie();
 ex.insert("ad");
 ex.insert("be");
 console.log(ex.getWords("23").toString());
+*/
